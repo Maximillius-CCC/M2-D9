@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--
+IMPORTANT:
+Start from the previous Musical assignment project you've created on M2-D2
+    
+ASSIGNMENT RULES
+- The project must be pushed to a new repository and linked in EduFlow by the end of the day.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided and documentation.
+- To test the page, open it with your browser and inspect it with developer tools / device emulator.
+- Use Bootstrap4.6 classes to create the page.
+- Use containers, rows and cols in order to achieve a great responsive layout.
+
+NOTE:
+Most of the requirements in this exercises reference a bootstrap's functionality or component. 
+Make sure you check the documentation before creting anything custom.
+-->
+
+<html>
+  <head>
+    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+   <style>
+       
+      body {
+        background-color: aqua;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      p {
+        font-size: 1rem;
+        font-family: roboto;
+      }
+
+      .hero {
+        padding: 14rem;
+        display: block;
+        margin: 0 auto;
+        background-image: url(./ASSETS/aranxa-esteve-pOXHU0UEDcg-unsplash.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+      }
+
+      .Jumbotron{
+          background-color: antiquewhite;
+          height:300px;
+          color:brown;
+          text-align:center;
+      }
+
+      .Jumbotron p{
+          margin-top: 100px;;
+      }
+
+      .card + .card{
+          margin-left:1rem;
+      }
+
+
+
+
+
+      .album {
+        max-width: 100%;
+        border: 2px, dotted, red;
+        display: flex;
+      }
+
+      .album p {
+        font-size: 0.8rem;
+      }
+      .album-cover {
+        max-width: 90%;
+      }
+
+      .album-title h2 {
+        font-family: "Courier New", Courier, monospace;
+        max-width: 50%;
+        margin: 0, auto;
+      }
+
+      .album-group {
+        width: 80%;
+      }
+
+      header {
+        background-color: white;
+        max-width: 100%;
+        padding-left: 3em;
+      }
+
+      li {
+        list-style: none;
+        display: inline-block;
+        padding-left: 1em;
+      }
+
+      footer {
+        display: flex;
+        background-color: white;
+      }
+
+      #reviews{
+       background-color: blanchedalmond;
+      }
+   </style>
+  </head>
+
+  <body>
+ <!-- EXERCISE 1
+        Use the specific bootstrap components to implement a Breadcrumb
+    -->
+
+    <!-- EXERCISE 2
+        Create a Jumbotron section with a quick explanation / image of the website
+    -->
+
+    <!-- EXERCISE 3
+        Foreach album in the favorite list, place the genre inside a badge
+    -->
+
+    <!-- EXERCISE 4
+        Foreach album in the favorite list, use the Bootstrap Card to contain it.
+        Use card layouts to format it in the best way possible.
+    -->
+
+    <!-- EXERCISE 5
+        Place the tracklist inside a Bootstrap table.
+        The row colors must be alternated.
+        Use a column for the track order number, one for the title and one for the track duration.
+        (If you want, you can also add extra columns)
+    -->
+
+    <!-- EXERCISE 6
+        Add a DELETE bootstrap button on each row of the tracklist, with appropriate transitions on the various pseudo-class states 
+        which you should also do for all the subsequent buttons you'll create.
+    -->
+
+    <!-- EXERCISE 7
+        Add a "Contact Me" form in the footer.
+        The "Contact Me" form has 2 fields:
+        - Email
+        - Text of the message
+        Use the correct Bootstrap styles for styling the buttons
+    -->
+
+    <!-- EXERCISE 8 
+        Add to the footer an extra column with the same links of the top nav.
+    -->
+
+    <!-- EXERCISE 9
+        Add a button "Add Track" under the track list of the album. Add also a nice shadow transition when the button is hovered (with the box-shadow property)
+    -->
+
+    <!-- EXERCISE 10
+        On "Add Track" button, open a new modal.
+        The modal shall contain a form with:
+        - Track number
+        - Track name
+        - Track length
+        - Track featuring
+        - Live Track (checkbox)
+        The fields should be inside an Input Group and divided in 2 columns.
+    -->
+
+    <!-- EXERCISE 11
+        All the field (except for Feat. and Live Track) are required fields and requires validation.
+        If the user clicks on the Add button and some fields are empty, a warning alert must be shown
+    -->
+
+    <!-- ############### -->
+    <!-- ###  EXTRA  ### -->
+    <!-- ############### -->
+
+    <!-- EXERCISE 12 
+
+        Create a splash screen to introduce your application nicely: 
+        A colored backdrop that will cover the page entirely and a logo or a loader/spinner in the middle 
+        with a fade-in/fade-out that will last 2 seconds
+
+        (it's usually being used while the page content is loading, but let's just use some tecnique we've seen to 
+        create an animation that displays it for 2 seconds and then it'll disappear) 
+    -->
+
+    <!-- EXERCISE 13
+        Add a Album Carousel with controls to display the top 10 albums
+    -->
+
+    <!-- EXERCISE 14
+        Make every section of the page "collapsable" if the user clicks on the section title
+    -->
+
+    <!-- EXERCISE 15
+        Add 2 bootstrap buttons at the bottom of the modal window you've created in ex. 10:
+        - Close => clear the fields and close the modal
+        - Add => Add the track to the list of tracks in the main page and display an alert success message 
+        - The new list-element added to the list will appear with a fade-in transition effect
+        https://getbootstrap.com/docs/4.6/components/alerts/
+        [EXTRA] Make the message disappear after 5 seconds
+        https://www.w3schools.com/jsref/met_win_settimeout.asp
+    -->
+
+    <!-- EXERCISE 16
+        Considering the button you've created in ex. 6:
+
+        Add the functionality that will make the row disappear when you click on its delete button. 
+        Add a fade-out effect to it before it gets removed, using a CSS transition effect
+    -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>>
+  <a class="navbar-brand" href="#">Navbar scroll</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarScroll"
+    aria-controls="navbarScroll"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul
+      class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll"
+      style="max-height: 100px;"
+    >
+      <li class="nav-item active">
+        <a class="nav-link" href="#albums"
+          >Album's of the Week <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#reviews">Reviews</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarScrollingDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Albums
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+          <li><a class="dropdown-item" href="#">Rock</a></li>
+          <li><a class="dropdown-item" href="#">Indie</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Dance</a></li>
+          <li><a class="dropdown-item" href="#">Metal</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link disabled"
+          href="#"
+          tabindex="-1"
+          aria-disabled="true">
+        </a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input
+        class="form-control mr-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<section class="hero">
+    <div class="Jumbotron">
+  <h1>Music</h1>
+  <p> This is a website showcasing all of Max's favourite albums</p>
+</div>
+</section>
+<section
+  id="albums"
+  class="container container-sm container-md container-lg">
+  <div class="albums-header">
+  <h2>Week's Hits</h2>
+</div>
+  <div class="album">
+    <div class="card col" style="width: 18rem;">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Dig_your_own_hole_album_cover.jpg/220px-Dig_your_own_hole_album_cover.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <i class="bi bi-volume-up"></i>
+      </div>
+      <div class="strive-card">
+          <span class="strive-card_header"></span><h4>Tracklist</h4>
+          <ol>
+              <li>Track 1</li>
+              <li>Track 2</li>
+              <li>Track 3</li>
+              <li>Track 4</li>
+              <li>Track 5</li>
+              <li>Track 6</li>
+              <li>Track 7</li>
+              <li>Track 8</li>
+              <li>Track 9</li>
+              <li>Track 10</li>
+          </ol>
+      </div>
+    </div>
+    <div class="card col" style="width: 18rem;">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Dig_your_own_hole_album_cover.jpg/220px-Dig_your_own_hole_album_cover.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <i class="bi bi-volume-up"></i>
+      </div>
+    </div>
+    <div class="card col" style="width: 18rem;">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Dig_your_own_hole_album_cover.jpg/220px-Dig_your_own_hole_album_cover.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <i class="bi bi-volume-up"></i>
+      </div>
+    </div>
+    <div class="card col" style="width: 18rem;">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Dig_your_own_hole_album_cover.jpg/220px-Dig_your_own_hole_album_cover.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <i class="bi bi-volume-up"></i>
+      </div>
+    </div>
+  </div>
+</section>
+<hr />
+
+<section id="reviews">
+  <div class="container">
+    <h2>Reviews</h2>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Screamadelica_album_cover.jpg/220px-Screamadelica_album_cover.jpg"
+      alt="screamadelica"
+    />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit
+      ipsa alias totam nemo eveniet, ullam dicta assumenda nostrum, nulla
+      laudantium iste sed repudiandae ducimus voluptas, minus possimus
+      praesentium accusantium saepe! Repudiandae iusto sequi quaerat
+      obcaecati consequatur earum rerum aut aperiam, quae quisquam neque
+      necessitatibus iste quos nam omnis eveniet. Accusantium illum autem
+      excepturi, amet voluptatum rerum vitae corrupti voluptas id, error,
+      harum facere cum doloribus aliquid culpa facilis ipsa?
+    </p>
+  </div>
+</section>
+<hr />
+<section id="worst">
+  <div class="container">
+    <
+    <h2>Not So Great</h2>
+    <img
+      src=https://upload.wikimedia.org/wikipedia/en/b/b1/Blur_Blur.jpg
+      alt="blur"
+    />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+      magni odit, magnam porro sit corrupti delectus fuga facere vero animi
+      doloremque cum numquam ratione eveniet, officia consectetur hic culpa
+      atque est? Voluptates quaerat corporis blanditiis amet reprehenderit
+      eligendi quas velit!
+    </p>
+  </div>
+</section>
+   
+  </body>
+</html>

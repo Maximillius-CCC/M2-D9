@@ -1,0 +1,16 @@
+.strive-card{
+    position:absolute;
+    background-color: white;
+    opacity:0
+
+}
+
+.strive-card:hover{
+    opacity:1;
+
+}
+
+.strive-card li:hover{
+    color:blue;
+    cursor: pointer;
+}
